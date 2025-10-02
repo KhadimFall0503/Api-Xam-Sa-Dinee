@@ -51,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
 CORS_ALLOWED_ORIGINS = [
     
     "http://localhost:5173",  
@@ -83,8 +85,12 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'xam_sa_dinee',      
+        'USER': 'root',                 
+        'PASSWORD': '',                  
+        'HOST': 'localhost',             
+        'PORT': '3306',                  
     }
 }
 
